@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>いま開いてる画面のサイズを下に表示します。それぞれの機器でこのページを開いて、widthとheightを教えてください。</div>
+    <pre id="size" style="border: solid 1px; width: 200px;">
+    </pre>
+    <br>
+    <div>↓10pxから100pxのテキストを並べてあります。pcやタブレットなど、使用する機器で表示して欲しい文字サイズを教えてください</div>
+    <br>
+    <div id="text"></div>
+    <script>
+        var w = window.innerWidth; // ウインドウ内側の横幅
+        var h = window.innerHeight; // ウインドウ内側高さ
+size.innerHTML = `width: ${w}
+height: ${h}`;
+
+for(let i=10; i<=100; i++) {
+    let a = document.createElement("div")
+    a.style.fontSize = i + "px";
+    a.innerHTML = `このテキストは${i}pxです`
+    text.appendChild(a)
+}
+    </script>
+</body>
+</html>
