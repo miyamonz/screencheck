@@ -13,11 +13,17 @@
     <br>
     <div id="text"></div>
     <script>
+        
+        function check(){
         var w = window.innerWidth; // ウインドウ内側の横幅
         var h = window.innerHeight; // ウインドウ内側高さ
+
 size.innerHTML = `width: ${w}
 height: ${h}`;
+        }
 
+check();
+window.onresize = check;
 for(let i=10; i<=100; i++) {
     let a = document.createElement("div")
     a.style.fontSize = i + "px";
